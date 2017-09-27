@@ -1,0 +1,18 @@
+<a href="#" (click)="Logout()">Logout</a>
+<a href="#" routerLink="/create">Create</a>
+
+<input type="text" name="search" placeholder="Search.." [(ngModel)]="search">
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Question</th>
+    <th>Date Posted</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let poll of pollList | filter: search">
+    <td>{{poll.creator}}</td>
+    <td><a (click)="ViewPoll(poll._id)" style="color:blue">{{poll.question}}</a></td>
+    <td>{{poll.createdAt | date}}</td>
+    <td *ngIf="poll.creator == name.name"><a href="#" (click)="Delete(poll._id)">Delete</a></td>
+  </tr>
+</table>

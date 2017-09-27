@@ -1,0 +1,4 @@
+<form #login="ngForm" (submit)="Register()">
+  <input type="text" name="namehtml" required minlength="2" [(ngModel)]="user.name" namehtml="ngModel">
+  <input type="submit" value="Login" [disabled]="login.invalid">
+</form>

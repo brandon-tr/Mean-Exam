@@ -1,0 +1,29 @@
+<a href="#" routerLink="/dashboard">Back to polls</a>
+<h2>{{poll.question}}</h2>
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Number of Votes</th>
+    <th>Action</th>
+  </tr>
+  <tr>
+    <td>{{poll.option1}}</td>
+    <td>{{poll.votes1}}</td>
+    <td><button (click)="Vote(poll._id, 'votes1')">Vote</button></td>
+  </tr>
+  <tr>
+    <td>{{poll.option2}}</td>
+    <td>{{poll.votes2}}</td>
+    <td><button (click)="Vote(poll._id, 'votes2')">Vote</button></td>
+  </tr>
+  <tr>
+    <td>{{poll.option3}}</td>
+    <td>{{poll.votes3}}</td>
+    <td><button (click)="Vote(poll._id, 'votes3')">Vote</button></td>
+  </tr>
+  <tr>
+    <td>{{poll.option4}}</td>
+    <td>{{poll.votes4}}</td>
+    <td><button (click)="Vote(poll._id, 'votes4')">Vote</button></td>
+  </tr>
+</table>
